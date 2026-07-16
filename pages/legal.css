@@ -1,0 +1,85 @@
+:root {
+  --ink: #24303a;
+  --ink-soft: #42505b;
+  --muted: #65717b;
+  --surface: #ffffff;
+  --surface-soft: #f6f7f7;
+  --line: #cfd5d9;
+  --container: 960px;
+  --transition: 220ms cubic-bezier(.22, .61, .36, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  color: var(--ink);
+  background: var(--surface);
+  font-family: 'Nunito', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+.skip-link { position: fixed; top: 10px; left: 10px; z-index: 10; transform: translateY(-160%); padding: 10px 14px; background: var(--ink); color: #fff; }
+.skip-link:focus { transform: none; }
+.legal-header { border-bottom: 1px solid var(--line); background: rgb(255 255 255 / 96%); }
+.legal-header__inner { width: min(var(--container), calc(100% - 48px)); min-height: 118px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.brand { width: 126px; flex: 0 0 auto; color: var(--ink); text-decoration: none; }
+.brand-mark { display: block; width: 126px; height: auto; overflow: visible; }
+.brand-mark text { fill: currentColor; font-family: 'Nunito', sans-serif; font-size: 22px; letter-spacing: 9px; font-weight: 700; }
+.brand-mark .brand-sub { font-size: 7px; letter-spacing: 3.5px; }
+.brand-mark path { fill: none; stroke: currentColor; stroke-width: 1; }
+.brand-mark .brand-w path { fill: currentColor; stroke: none; }
+.back-link { display: inline-flex; min-height: 44px; align-items: center; gap: 10px; text-decoration: none; text-transform: uppercase; font-size: 12px; font-weight: 700; letter-spacing: .04em; }
+.back-link::before { content: '\2190'; font-size: 20px; font-weight: 400; transition: transform var(--transition); }
+.legal-main { width: min(var(--container), calc(100% - 48px)); min-height: calc(100vh - 260px); margin-inline: auto; padding-block: clamp(58px, 8vw, 100px); }
+.legal-intro { max-width: 760px; padding-bottom: 38px; border-bottom: 1px solid var(--line); }
+.eyebrow { margin: 0 0 10px; text-transform: uppercase; font-size: 12px; font-weight: 700; letter-spacing: .06em; }
+h1 { margin: 0; text-transform: uppercase; font-size: clamp(34px, 6vw, 58px); line-height: 1.12; letter-spacing: .01em; }
+.lead { max-width: 680px; margin: 22px 0 0; color: var(--ink-soft); font-size: 18px; }
+.legal-content { max-width: 760px; padding-top: 18px; }
+.legal-content section { padding-block: 25px; border-bottom: 1px solid var(--line); }
+.legal-content section:last-child { border-bottom: 0; }
+h2 { margin: 0 0 12px; text-transform: uppercase; font-size: 18px; line-height: 1.35; letter-spacing: .015em; }
+h3 { margin: 22px 0 7px; font-size: 16px; }
+p, ul { margin: 0 0 14px; }
+ul { padding-left: 22px; }
+address { font-style: normal; }
+.legal-content a { text-underline-offset: 3px; }
+.legal-footer { padding: 26px max(24px, calc((100% - var(--container)) / 2)); background: var(--surface-soft); color: var(--muted); font-size: 12px; }
+.legal-footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.legal-footer p { margin: 0; }
+.legal-footer nav { display: flex; flex-wrap: wrap; justify-content: flex-end; }
+.legal-footer a { display: inline-flex; min-height: 44px; align-items: center; padding: 0 18px; border-left: 1px solid var(--line); text-decoration: none; text-transform: uppercase; }
+.legal-footer a[aria-current='page'] { color: var(--ink); font-weight: 700; }
+:focus-visible { outline: 3px solid #55758a; outline-offset: 4px; }
+
+@media (hover: hover) and (pointer: fine) {
+  .back-link:hover::before { transform: translateX(-4px); }
+  .back-link:hover, .legal-content a:hover, .legal-footer a:hover { color: #4e7187; }
+}
+
+@media (max-width: 600px) {
+  .legal-header__inner, .legal-main { width: calc(100% - 40px); }
+  .legal-header__inner { min-height: 92px; }
+  .brand, .brand-mark { width: 96px; }
+  .back-link { font-size: 11px; }
+  .legal-main { padding-block: 48px; }
+  .lead { font-size: 16px; }
+  .legal-footer__inner { flex-direction: column; text-align: center; }
+  .legal-footer nav { justify-content: center; }
+  .legal-footer a { padding-inline: 12px; }
+  .legal-footer a:first-child { border-left: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
