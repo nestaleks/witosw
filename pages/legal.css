@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+
 :root {
   --ink: #24303a;
   --ink-soft: #42505b;
@@ -17,7 +19,7 @@ body {
   overflow-x: hidden;
   color: var(--ink);
   background: var(--surface);
-  font-family: 'Nunito', 'Segoe UI', sans-serif;
+  font-family: 'Barlow', 'Segoe UI', sans-serif;
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -29,7 +31,7 @@ a { color: inherit; }
 .legal-header__inner { width: min(var(--container), calc(100% - 48px)); min-height: 118px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
 .brand { width: 126px; flex: 0 0 auto; color: var(--ink); text-decoration: none; }
 .brand-mark { display: block; width: 126px; height: auto; overflow: visible; }
-.brand-mark text { fill: currentColor; font-family: 'Nunito', sans-serif; font-size: 22px; letter-spacing: 9px; font-weight: 700; }
+.brand-mark text { fill: currentColor; font-family: 'Barlow', sans-serif; font-size: 22px; letter-spacing: 9px; font-weight: 700; }
 .brand-mark .brand-sub { font-size: 7px; letter-spacing: 3.5px; }
 .brand-mark path { fill: none; stroke: currentColor; stroke-width: 1; }
 .brand-mark .brand-w path { fill: currentColor; stroke: none; }

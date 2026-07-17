@@ -1,16 +1,4 @@
-@font-face {
-  font-family: 'Nunito';
-  src: local('Nunito Regular'), local('Nunito');
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Nunito';
-  src: local('Nunito Bold');
-  font-weight: 700;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
 
 :root {
   --ink: #24303a;
@@ -37,7 +25,7 @@ body {
   overflow-x: hidden;
   color: var(--ink);
   background: var(--surface);
-  font-family: 'Nunito', 'Segoe UI', sans-serif;
+  font-family: 'Barlow', 'Segoe UI', sans-serif;
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -59,7 +47,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .header-inner { width: min(var(--container), calc(100% - 80px)); height: 100%; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; }
 .brand { width: 154px; flex: 0 0 auto; color: var(--ink); text-decoration: none; }
 .brand-mark { width: 150px; height: auto; overflow: visible; }
-.brand-mark text { fill: currentColor; font-family: 'Nunito', sans-serif; font-size: 22px; letter-spacing: 9px; font-weight: 700; }
+.brand-mark text { fill: currentColor; font-family: 'Barlow', sans-serif; font-size: 22px; letter-spacing: 9px; font-weight: 700; }
 .brand-mark .brand-sub { font-size: 7px; letter-spacing: 3.5px; }
 .brand-mark path { fill: none; stroke: currentColor; stroke-width: 1; }
 .brand-mark .brand-w path { fill: currentColor; stroke: none; }
