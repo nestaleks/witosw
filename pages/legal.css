@@ -28,13 +28,9 @@ a { color: inherit; }
 .skip-link { position: fixed; top: 10px; left: 10px; z-index: 10; transform: translateY(-160%); padding: 10px 14px; background: var(--ink); color: #fff; }
 .skip-link:focus { transform: none; }
 .legal-header { border-bottom: 1px solid var(--line); background: rgb(255 255 255 / 96%); }
-.legal-header__inner { width: min(var(--container), calc(100% - 48px)); min-height: 118px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
-.brand { width: 126px; flex: 0 0 auto; color: var(--ink); text-decoration: none; }
-.brand-mark { display: block; width: 126px; height: auto; overflow: visible; }
-.brand-mark text { fill: currentColor; font-family: 'Barlow', sans-serif; font-size: 22px; letter-spacing: 9px; font-weight: 700; }
-.brand-mark .brand-sub { font-size: 7px; letter-spacing: 3.5px; }
-.brand-mark path { fill: none; stroke: currentColor; stroke-width: 1; }
-.brand-mark .brand-w path { fill: currentColor; stroke: none; }
+.legal-header__inner { width: min(var(--container), calc(100% - 48px)); min-height: 100px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.brand { width: 87px; flex: 0 0 auto; color: var(--ink); text-decoration: none; }
+.brand-mark { display: block; width: auto; height: 75px; max-height: 75px; object-fit: contain; object-position: left center; }
 .back-link { display: inline-flex; min-height: 44px; align-items: center; gap: 10px; text-decoration: none; text-transform: uppercase; font-size: 12px; font-weight: 700; letter-spacing: .04em; }
 .back-link::before { content: '\2190'; font-size: 20px; font-weight: 400; transition: transform var(--transition); }
 .legal-main { width: min(var(--container), calc(100% - 48px)); min-height: calc(100vh - 260px); margin-inline: auto; padding-block: clamp(58px, 8vw, 100px); }
@@ -66,8 +62,8 @@ address { font-style: normal; }
 
 @media (max-width: 600px) {
   .legal-header__inner, .legal-main { width: calc(100% - 40px); }
-  .legal-header__inner { min-height: 92px; }
-  .brand, .brand-mark { width: 96px; }
+  .legal-header__inner { min-height: 82px; }
+  .brand { width: 87px; }
   .back-link { font-size: 11px; }
   .legal-main { padding-block: 48px; }
   .lead { font-size: 16px; }

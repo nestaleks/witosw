@@ -1,5 +1,6 @@
 document.documentElement.classList.add('js');
 
+const header = document.querySelector('[data-header]');
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.primary-nav');
 const navLinks = [...navigation.querySelectorAll('a[href^="#"]')];
@@ -58,7 +59,11 @@ const activeObserver = new IntersectionObserver((entries) => {
 
 sectionMap.forEach(({ section }) => activeObserver.observe(section));
 
+const syncHeaderBackground = () => header?.classList.toggle('is-scrolled', window.scrollY > 12);
+
+syncHeaderBackground();
 window.addEventListener('scroll', () => {
+  syncHeaderBackground();
   if (window.scrollY < document.querySelector('.hero').offsetHeight * .55) {
     navLinks.forEach((link) => link.removeAttribute('aria-current'));
   }
